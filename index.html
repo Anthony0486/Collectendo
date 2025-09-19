@@ -6,8 +6,9 @@
     <title>Collectendo</title>
   </head>
   <body>
+      <!-- HEADER -->
     <div class="logo">
-      <img src="./public/Assets/logo-red.svg" alt="logo">
+      <img src="./public/Assets/logo-red.svg" alt="logoRouge">
       <h1>Full Set collection</h1>
     </div>
     <nav class="navbar">
@@ -20,20 +21,42 @@
           <img alt="moncomptelogo" src="./public/Assets/moncomptebtnWHITE.svg" alt="lienMonCompte">Mon compte</a></li>
       </ul>
     </nav>
+    <!--MAIN -->
     <main class="latest">
-      <div class="fiche1"></div>
-      <div class="fiche2"></div>
-      <div class="fiche3"></div>
+      <h2>Derniers ajouts</h2>
+      <h3>Voici les entrées du mois:</h3>
+      <div class="fichesProduit">
+        <div class="fiche">
+          <img src="./public/Assets/Mario-kart-world-switch2.jpg" alt="ficheProduit">
+          <h4>Nom Produit</h4>
+          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
+          <input type="submit" value="Retirer de ma liste">
+        </div>
+        <div class="fiche">
+          <img src="./public/Assets/zelda-totk-switch2.jpg" alt="ficheProduit">
+          <h4>Nom Produit</h4>
+          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
+          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
+        </div>
+        <div class="fiche">
+          <img src="./public/Assets/boite-vide-switch.jpg" alt="ficheProduit">
+          <h4>Nom Produit</h4>
+          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
+          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
+        </div>
+      </div>
     </main>
-
+    <!--FOOTER-->
     <footer>  
-      <ul>
-        <li><a href="CGV">CGV</a></li>
-        <li><a href="CGV">Mentions légales</a></li>
+      <ul class="footerLinks">
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Accessibilité</a></li>
       </ul>
-      <input type="email" placeholder="Entrez votre email" name="" id="inputmail">
-        <input type="submit" value="valider" id="btn-submit">
-            <p>© Collectendo. 2025 tous droits réservés.</p>
+      <input class="inputMail" type="email" placeholder="Inscription Newsletter" name="">
+      <input class="btn-submit" type="submit" value="valider">
+      <img class="footerLogo" src="./public/Assets/logo-blanc.svg" alt="logoBlanc">
+      <p class="rights">© Collectendo. 2025 tous droits réservés.</p>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
