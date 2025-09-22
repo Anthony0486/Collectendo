@@ -14,12 +14,22 @@
     --border-color: rgba(23, 21, 21, 0.08);
     --hover-color:#eb5b4b;
 }
-/* HEADER-------------------------------------- */
+/* BODY-------------------------------------- */
 body{
   min-height: 100vh;
   background: var(--primary-color);
   font-family: "Roboto", sans-serif; 
+  transition: background 0.3s, color 0.3s;
+  font-style: var(--text-color);
 }
+
+body .darkMode{
+  min-height: 100vh;
+  background: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  font-style: var(--primary-color);
+}
+
 /* HEADER-------------------------------------- */
 
 .logo{
@@ -81,6 +91,15 @@ body{
   margin: 5px;
   display: flex;
 }
+
+.navbar #darkModeBtn{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  background: var(--text-color);
+  color: var(--primary-color);
+}
+
 /* MAIN-------------------------------------- */
 
 main{
