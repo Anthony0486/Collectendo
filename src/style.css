@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import  url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -19,15 +19,13 @@ body{
   min-height: 100vh;
   background: var(--primary-color);
   font-family: "Roboto", sans-serif; 
-  transition: background 0.3s, color 0.3s;
-  font-style: var(--text-color);
+  /* transition: background 0.3s, color 0.3s; */
+  color: var(--text-color);
 }
 
 body .darkMode{
-  min-height: 100vh;
   background: var(--text-color);
-  font-family: "Roboto", sans-serif;
-  font-style: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* HEADER-------------------------------------- */
