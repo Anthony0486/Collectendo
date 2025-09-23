@@ -1,23 +1,25 @@
 import './style.css'
-
+//VARIABLES
 const darkModeBtn = document.getElementById("darkModeBtn");
 const body = document.body;
-const dropDown = document.getElementById("myDropDown");
+const menuBtn = document.getElementById("menuBtn");
+const dropdown = document.getElementById("myDropDown");
 
+//DARK MODE
 darkModeBtn.addEventListener("click", () => {
     body.classList.toggle("darkMode");  
 })
 
-function myFunction(){
-    dropDown.classList.toggle("show");
-}
+//DROPDOWN
+menuBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("show");
+});
 
-window.onclick = function(event){
+window.onclick = function(event) {
     if (!event.target.matches(".dropBtn")){
-        var dropdown = document.getElementsByClassName("dropdownContent");
-        var i;
-        for (let i=0; i < dropdown.lenght; i++ ) {
-            var openDropdown = dropdown[i];
+        const dropdowns = document.getElementsByClassName("dropdownContent");
+        for (let i=0; i < dropdowns.length; i++ ) {
+            const openDropdown = dropdowns[i];
             if(openDropdown.classList.contains("show")){
                 openDropdown.classList.remove("show");
             }
