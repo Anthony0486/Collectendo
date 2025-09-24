@@ -83,6 +83,7 @@ body.darkMode{ /*DARK MODE*/
   position: relative;
   display: inline-block;
   align-self: center;
+  
 }
 
 .dropdownContent {
@@ -240,13 +241,14 @@ footer{
 footer .inputMail{
   height: 50%;
   width: 100%;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   display: flex;
   justify-self: center;
   align-self: center;
   font-size: 0.7em;
   grid-area: in;
+  border-radius: 100px;
 }
 
 footer .footerLinks{
