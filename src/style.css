@@ -198,6 +198,11 @@ main .fiche h4{
   text-align: center;
 }
 
+main .fiche h5{
+  text-align: center;
+  font-size: 0.8em;
+}
+
 main .fiche #addListBtn{
   background: var(--secondary-color);
   color: var(--bg-color);
