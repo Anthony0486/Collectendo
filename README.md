@@ -1,2 +1,1 @@
-# Collectendo
-Nintendo Full set Project site
+A Nintendo full set site projet for the passionate collectors.
