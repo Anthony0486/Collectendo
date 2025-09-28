@@ -22,7 +22,7 @@ body{
   min-height: 100vh;
   background: var(--primary-color);
   font-family: "Roboto", sans-serif; 
-  /* transition: background 0.3s, color 0.3s; */
+  transition: 0.3s, color 0.3s;
   color: var(--text-color);
 }
 
