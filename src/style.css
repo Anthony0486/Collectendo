@@ -43,7 +43,7 @@ body.darkMode{ /*DARK MODE*/
 }
 
 .logo img{
-  margin-left: 20px;
+  margin-left: 10px;
   width: 20%;
   }
 
@@ -53,26 +53,28 @@ body.darkMode{ /*DARK MODE*/
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.8vh;
-  text-shadow: -3px 7px 3px #0000002e;
-  color: rgb(231, 0, 17);
+  text-shadow: -3px 7px 3px var(--text-color);
+  color: var(--secondary-color);
 }
 
 .navbar{
   width: 100%;
-  height: 40px;
+  height: 60%;
   background: var(--secondary-color);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
 .dropBtn {
   background: var(--secondary-color);
-  border: solid;
-  border-radius: 100px;
-  color: var(--box-color);
+  border: solid 2px;
+  border-radius: 20px;
+  color: var(--primary-color);
   font-size: 1em;
-  width: 80px;
+  width: 70px;
+  font-size: 0.8em;
+  letter-spacing: 1.8px;
 }
 
 .dropBtn:hover{
@@ -123,12 +125,13 @@ body.darkMode{ /*DARK MODE*/
 }
 
 .navbar ul{
-  width: 250px;
+  width: 300px;
   display: flex;
-  justify-content: space-evenly; 
+  justify-content: flex-end; 
 }
 .navbar ul li{
   list-style: none;  
+  padding: 10px;
 }
 .navbar ul li a{
   text-decoration: none;
@@ -146,15 +149,24 @@ body.darkMode{ /*DARK MODE*/
   justify-self: center;
   
 }
-
-.navbar #darkModeBtn{
+.darkContainer{
+  width: 80px;
   display: flex;
   align-self: center;
-  justify-self: center;
-  background: var(--text-color);
+  justify-content:center ;
+}
+
+.navbar #darkModeBtn{
+  background: var(--secondary-color);
+  border: solid 2px;
+  border-radius: 20px;
   color: var(--primary-color);
-  border-radius: 100px;
-  width: 15%;
+  border-radius: 20px;
+  width: 50px;
+  font-size: 0.6em;
+}
+.navbar #darkModeBtn:hover{
+  background: var(--hover-color);  
 }
 
 /* MAIN-------------------------------------- */
@@ -204,9 +216,13 @@ main .fiche h5{
 }
 
 main .fiche #addListBtn{
+  border-radius: 20px;
+}
+
+main .fiche #rmListBtn{
   background: var(--secondary-color);
   color: var(--bg-color);
-  
+  border-radius: 20px;
 }
 
 main .fiche #addListBtn:hover{
@@ -272,6 +288,7 @@ footer .btn-submit{
   display: flex;
   justify-self: start;
   align-self: center;
+  border-radius: 20px;
 }
 
 footer .rights{
@@ -308,7 +325,7 @@ footer .footerLogo{
 
 /* RESPONSIVE-------------------------------------- */
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 850px) {
     main .fichesProduit {
         flex-direction: column;
         align-items: center;

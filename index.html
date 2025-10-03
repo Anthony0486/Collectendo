@@ -12,7 +12,7 @@
       <h1>Full Set collection</h1>
     </div>
     <nav class="navbar">
-      <!--DROPDOWN MENUS-->
+      <!--DROPDOWN MENU PRINCIPAL-->
       <div class="dropDown">
         <button id="menuBtn" class="dropBtn">Menu</button>
         <div id="myDropDown" class="dropdownContent">
@@ -22,16 +22,27 @@
         </div>
       </div>
       <!--DARK MODE-->
+      <div class="darkContainer">
             <button id="darkModeBtn">Mode sombre</button>
-      <ul>
-        <li><a href="#" alt="lienAPropos">
-          <img alt="aproposlogo" src="./public/Assets/aproposbtnWHITE.svg" alt="lienAPropos">A propos</a></li>
+          </div>
+        <ul>
+           <li>
+          <div class="dropDown">
+            <a id="menuBtn" class="aPropos" href="#" alt="lienAPropos">
+            <img alt="aproposlogo" src="./public/Assets/aproposbtnWHITE.svg" alt="lienAPropos">A propos</a>
+          <div id="myDropDown" class="dropdownContent">
+            <a href="#">Contact</a>
+            <a href="#">Qui suis je?</a>
+          </div>
+         </div>
+        </li>
         <li><a href="#" alt="lienRecherche">
           <img alt="recherchelogo" src="./public/Assets/rechercherbtnWHITE.svg" alt="lienRecherche">Rechercher</a></li>
         <li><a href="#" alt="lienMonCompte">
           <img alt="moncomptelogo" src="./public/Assets/moncomptebtnWHITE.svg" alt="lienMonCompte">Mon compte</a></li>
       </ul>
     </nav>
+     
     <!--MAIN -->
     <main class="latest">
       <h2>Derniers ajouts</h2>
@@ -42,7 +53,7 @@
           <h4>The legend of Zelda TOTK</h4>
           <h5>Switch 2</h5>
           <input id="addListBtn" type="submit" value="Ajouter à ma liste">
-          <input type="submit" value="Retirer de ma liste">
+          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
         </div>
         <div class="fiche">
           <img src="./public/Assets/mariokart_switch2.svg" alt="ficheProduit">
