@@ -26,12 +26,13 @@
             <button id="darkModeBtn">Mode sombre</button>
           </div>
         <ul>
-           <li>
+           <!--DROPDOWN A PROPOS-->
+           <li> 
           <div class="dropDown">
-            <a id="menuBtn" class="aPropos" href="#" alt="lienAPropos">
+            <a id="menuBtn1" class="aPropos" href="#" alt="lienAPropos">
             <img alt="aproposlogo" src="./public/Assets/aproposbtnWHITE.svg" alt="lienAPropos">A propos</a>
-          <div id="myDropDown" class="dropdownContent">
-            <a href="#">Contact</a>
+          <div id="myDropDown1" class="dropdownContent">
+            <a class="lienContact" href="#">Contact</a>
             <a href="#">Qui suis je?</a>
           </div>
          </div>
@@ -42,7 +43,20 @@
           <img alt="moncomptelogo" src="./public/Assets/moncomptebtnWHITE.svg" alt="lienMonCompte">Mon compte</a></li>
       </ul>
     </nav>
-     
+    <!-- MODALE A PROPOS -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+          <h2>Contact</h2>
+    <div class="modal-body">
+      <p>Si vous souhaitez me contacter :</p>
+      <input class="inputMail" type="email" placeholder="Votre email">
+      <input class="btn-submit" type="submit" value="Valider">
+    </div>
+    <div class="modal-footer">
+    </div>
+    </div>
+    </div>
     <!--MAIN -->
     <main class="latest">
       <h2>Derniers ajouts</h2>
@@ -57,7 +71,7 @@
         </div>
         <div class="fiche">
           <img src="./public/Assets/mariokart_switch2.svg" alt="ficheProduit">
-          <h4>Mario Kart World</h4><br>
+          <h4>Mario Kart World</h4>
           <h5>Switch 2</h5>
           <input id="addListBtn" type="submit" value="Ajouter à ma liste">
           <input id="rmListBtn" type="submit" value="Retirer de ma liste">
@@ -85,7 +99,7 @@
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Accessibilité</a></li>
       </ul>
-      <input class="inputMail" type="email" placeholder="Inscription Newsletter">
+      <input class="inputMail" type="email" placeholder=" Inscription Newsletter">
       <input class="btn-submit" type="submit" value="Valider">
       <img class="footerLogo" src="./public/Assets/logo-blanc.svg" alt="logoBlanc">
       <p class="rights">© Collectendo. 2025 tous droits réservés.</p>

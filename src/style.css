@@ -38,18 +38,18 @@ body.darkMode{ /*DARK MODE*/
 
 .logo{
   width: 100%;
-  height: 80px;
+  height: 80%;
   display: grid;
 }
 
 .logo img{
-  margin-left: 10px;
+  margin-left: 20px;
   width: 20%;
   }
 
 .logo h1{
   height: 20px;
-  margin-left: 10px;
+  margin-left: 5px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.8vh;
@@ -65,16 +65,17 @@ body.darkMode{ /*DARK MODE*/
   justify-content: space-between;
   align-items: flex-end;
 }
-
+/* DROPDOWN MENU PRINCIPAL-------------------------------------- */
 .dropBtn {
   background: var(--secondary-color);
   border: solid 2px;
   border-radius: 20px;
   color: var(--primary-color);
-  font-size: 1em;
-  width: 70px;
-  font-size: 0.8em;
+  width: 60px;
+  font-size: 1.5vh;
   letter-spacing: 1.8px;
+  padding: 3px 3px;
+  margin-left: 5px;
 }
 
 .dropBtn:hover{
@@ -99,8 +100,7 @@ body.darkMode{ /*DARK MODE*/
   opacity: 0;
   max-height: 0; 
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  
-}
+  }
 
 .dropdownContent a {
   padding: 12px 16px;
@@ -124,8 +124,17 @@ body.darkMode{ /*DARK MODE*/
   display: block;
 }
 
+/* DROPDOWN A PROPOS-------------------------------------- */
+.dropDown1 {
+  position: relative;
+  display: inline-block;
+  align-self: center;
+}
+
+
+/* MENUS NAVBAR -------------------------------------- */
 .navbar ul{
-  width: 300px;
+  width: 250px;
   display: flex;
   justify-content: flex-end; 
 }
@@ -150,7 +159,7 @@ body.darkMode{ /*DARK MODE*/
   
 }
 .darkContainer{
-  width: 80px;
+  width: 60px;
   display: flex;
   align-self: center;
   justify-content:center ;
@@ -169,13 +178,42 @@ body.darkMode{ /*DARK MODE*/
   background: var(--hover-color);  
 }
 
+/* MODALE A PROPOS----------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /*Autoriser le scroll */
+  background: var(--box-color);
+  background-color: rgba(0, 0, 0, 0.212); /* opacité derrière la body */
+}
+.modal-content {
+  background-color: var(--box-color);
+  margin: 15% auto; 
+  padding: 20px;
+  border: var(--border-color) solid 0.9px;
+  box-shadow: var(--box-shadow);
+  width: 80%; 
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+}
+
 /* MAIN-------------------------------------- */
 
 main{
     min-height: 500px;
     width: 100%;
-
-}
+  }
 
 main h2{
   padding: 10px;
@@ -263,7 +301,6 @@ footer .inputMail{
   height: 50%;
   width: 100%;
   color: var(--text-color);
-  text-align: center;
   display: flex;
   justify-self: center;
   align-self: center;
@@ -282,6 +319,7 @@ footer .footerLinks{
 
 footer .btn-submit{
   margin-left: 10px;
+  padding: auto;
   height: 60%;
   width: 50%;
   grid-area: bt;
@@ -289,6 +327,7 @@ footer .btn-submit{
   justify-self: start;
   align-self: center;
   border-radius: 20px;
+  font-size: 1.3vh;
 }
 
 footer .rights{
