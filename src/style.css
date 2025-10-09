@@ -66,7 +66,7 @@ body.darkMode{ /*DARK MODE*/
   align-items: flex-end;
 }
 /* DROPDOWN MENU PRINCIPAL-------------------------------------- */
-.dropBtn {
+.dropBtn{
   background: var(--secondary-color);
   border: solid 2px;
   border-radius: 20px;
@@ -82,7 +82,7 @@ body.darkMode{ /*DARK MODE*/
   background: var(--hover-color);
 }
 
-.dropDown {
+.dropDown{
   position: relative;
   display: inline-block;
   align-self: center;
@@ -100,6 +100,7 @@ body.darkMode{ /*DARK MODE*/
   opacity: 0;
   max-height: 0; 
   transition: max-height 0.3s ease, opacity 0.3s ease;
+  
   }
 
 .dropdownContent a {
@@ -124,21 +125,32 @@ body.darkMode{ /*DARK MODE*/
   display: block;
 }
 
-/* DROPDOWN A PROPOS-------------------------------------- */
-.dropDown1 {
-  position: relative;
-  display: inline-block;
-  align-self: center;
+
+/* MENUS NAVBAR -------------------------------------- */
+
+.navbar .dropdownContent{
+  right: 0px;
 }
 
 
-/* MENUS NAVBAR -------------------------------------- */
+.navbar .dropdownContent a {
+  color: var(--textMenu-color);
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 12px 16px; 
+}
+
+.navbar .dropdownContent a:hover {
+  background: var(--hover-color);
+  color: var(--primary-color);
+}
 .navbar ul{
   width: 250px;
   display: flex;
   justify-content: flex-end; 
 }
 .navbar ul li{
+  position: relative;
   list-style: none;  
   padding: 10px;
 }
@@ -178,7 +190,7 @@ body.darkMode{ /*DARK MODE*/
   background: var(--hover-color);  
 }
 
-/* MODALE A PROPOS----------------------------*/
+/* MODALES A PROPOS----------------------------*/
 .modal {
   display: none;
   position: fixed;
@@ -187,7 +199,7 @@ body.darkMode{ /*DARK MODE*/
   height: 100%; 
   overflow: auto; /*Autoriser le scroll */
   background: var(--box-color);
-  background-color: rgba(0, 0, 0, 0.212); /* opacité derrière la body */
+  background-color: rgba(0, 0, 0, 0.399); /* opacité derrière la body */
 }
 .modal-content {
   background-color: var(--box-color);
@@ -197,7 +209,7 @@ body.darkMode{ /*DARK MODE*/
   box-shadow: var(--box-shadow);
   width: 80%; 
 }
-.close {
+.close, .close1 {
   color: #aaa;
   float: right;
   font-size: 28px;

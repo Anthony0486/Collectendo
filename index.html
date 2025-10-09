@@ -26,32 +26,61 @@
             <button id="darkModeBtn">Mode sombre</button>
           </div>
         <ul>
-           <!--DROPDOWN A PROPOS-->
-           <li> 
+          <!--DROPDOWN A PROPOS/RECHERCHER/MON COMPTE-->
+          <li> 
           <div class="dropDown">
             <a id="menuBtn1" class="aPropos" href="#" alt="lienAPropos">
             <img alt="aproposlogo" src="./public/Assets/aproposbtnWHITE.svg" alt="lienAPropos">A propos</a>
           <div id="myDropDown1" class="dropdownContent">
             <a class="lienContact" href="#">Contact</a>
-            <a href="#">Qui suis je?</a>
+            <a class="lienquisuisje" href="#">Qui suis-je?</a>
           </div>
-         </div>
+        </div>
         </li>
-        <li><a href="#" alt="lienRecherche">
-          <img alt="recherchelogo" src="./public/Assets/rechercherbtnWHITE.svg" alt="lienRecherche">Rechercher</a></li>
-        <li><a href="#" alt="lienMonCompte">
-          <img alt="moncomptelogo" src="./public/Assets/moncomptebtnWHITE.svg" alt="lienMonCompte">Mon compte</a></li>
+        <li>
+          <div class="dropDown">
+          <a id="menuBtn2" class="search" href="#" alt="lienRecherche">
+          <img alt="recherchelogo" src="./public/Assets/rechercherbtnWHITE.svg" alt="lienRecherche">Rechercher</a>
+        <div id="myDropDown2" class="dropdownContent">
+            <input class="inputSearch" type="text" placeholder=" Que recherchez vous?">
+            <input class="btn-submit" type="submit" value="Envoyer">
+          </div>
+          </div>
+        </li>
+          <li>
+            <div class="dropDown">
+            <a id="menuBtn3" class="myAcount" href="#" alt="lienMonCompte">
+          <img alt="moncomptelogo" src="./public/Assets/moncomptebtnWHITE.svg" alt="lienMonCompte">Mon compte</a>
+              <div id="myDropDown3" class="dropdownContent">
+            <a class="connexion" href="#">Me connecter</a>
+            <a class="personalInformations" href="#">Mes informations personnelles</a>
+            <a class="myLists" href="#">Mes Listes</a>
+          </div>
+        </div>
+        </li>
       </ul>
     </nav>
-    <!-- MODALE A PROPOS -->
+    <!-- MODALE QUI SUIS JE? -->
+    <div id="myModal1" class="modal">
+      <div class="modal-content">
+        <span class="close1">&times;</span>
+          <h2>Qui suis-je?</h2>
+    <div class="modal-body">
+      <p>Pour me contacter, veuillez entrer votre adresse email ci dessous :</p>
+    </div>
+    <div class="modal-footer">
+    </div>
+    </div>
+    </div>
+    <!-- MODALE CONTACT -->
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
           <h2>Contact</h2>
     <div class="modal-body">
-      <p>Si vous souhaitez me contacter :</p>
+      <p>Pour me contacter, veuillez entrer votre adresse email ci dessous :</p>
       <input class="inputMail" type="email" placeholder="Votre email">
-      <input class="btn-submit" type="submit" value="Valider">
+      <input class="btn-submit" type="submit" value="Envoyer">
     </div>
     <div class="modal-footer">
     </div>
@@ -100,7 +129,7 @@
         <li><a href="#">Accessibilité</a></li>
       </ul>
       <input class="inputMail" type="email" placeholder=" Inscription Newsletter">
-      <input class="btn-submit" type="submit" value="Valider">
+      <input class="btn-submit" type="submit" value="Envoyer">
       <img class="footerLogo" src="./public/Assets/logo-blanc.svg" alt="logoBlanc">
       <p class="rights">© Collectendo. 2025 tous droits réservés.</p>
     </footer>
