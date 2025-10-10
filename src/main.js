@@ -1,4 +1,5 @@
 import './style.css'
+
 //VARIABLES
 const darkModeBtn = document.getElementById("darkModeBtn");
 const body = document.body;

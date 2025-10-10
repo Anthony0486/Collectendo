@@ -38,16 +38,15 @@ body.darkMode{ /*DARK MODE*/
 
 .logo{
   width: 100%;
-  height: 80%;
   display: grid;
 }
 
 .logo img{
-  margin-left: 20px;
+  left: 10px;
   width: 20%;
   }
 
-.logo h1{
+/* .logo h1{ /texte sous le logo à valider/
   height: 20px;
   margin-left: 5px;
   text-transform: uppercase;
@@ -55,7 +54,7 @@ body.darkMode{ /*DARK MODE*/
   font-size: 0.8vh;
   text-shadow: -3px 7px 3px var(--text-color);
   color: var(--secondary-color);
-}
+} */
 
 .navbar{
   width: 100%;
@@ -100,7 +99,6 @@ body.darkMode{ /*DARK MODE*/
   opacity: 0;
   max-height: 0; 
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  
   }
 
 .dropdownContent a {
@@ -125,19 +123,35 @@ body.darkMode{ /*DARK MODE*/
   display: block;
 }
 
+.dropDown .inputSearch{
+  font-size: 0.7em;
+  border-radius: 20px;
+  width: 97%;
+}
+.dropDown .btn-submit{
+  border-radius: 20px;
+  font-size: 1.3vh;
+  width: 35%;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.dropDown .btn-submit:hover{
+  background: var(--hover-color);
+}
 
 /* MENUS NAVBAR -------------------------------------- */
 
-.navbar .dropdownContent{
+.navbar li .dropdownContent {
   right: 0px;
 }
-
 
 .navbar .dropdownContent a {
   color: var(--textMenu-color);
   text-decoration: none;
   font-size: 0.95em;
   padding: 12px 16px; 
+  right: 0px;
 }
 
 .navbar .dropdownContent a:hover {
@@ -199,7 +213,7 @@ body.darkMode{ /*DARK MODE*/
   height: 100%; 
   overflow: auto; /*Autoriser le scroll */
   background: var(--box-color);
-  background-color: rgba(0, 0, 0, 0.399); /* opacité derrière la body */
+  background-color: rgba(0, 0, 0, 0.399); /* opacité du body derrière la modale */
 }
 .modal-content {
   background-color: var(--box-color);
@@ -218,6 +232,24 @@ body.darkMode{ /*DARK MODE*/
 .close:hover, .close:focus {
   color: black;
   text-decoration: none;
+}
+
+.modal .inputMail{
+  font-size: 0.7em;
+  border-radius: 20px;
+  width: 25%;
+}
+
+.modal .btn-submit{
+  border-radius: 20px;
+  font-size: 1.3vh;
+  width: 10%;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.modal .btn-submit:hover{
+  background: var(--hover-color);
 }
 
 /* MAIN-------------------------------------- */
@@ -310,7 +342,7 @@ footer{
 }
 
 footer .inputMail{
-  height: 50%;
+  height: 40%;
   width: 100%;
   color: var(--text-color);
   display: flex;
@@ -318,7 +350,7 @@ footer .inputMail{
   align-self: center;
   font-size: 0.7em;
   grid-area: in;
-  border-radius: 100px;
+  border-radius: 20px;
 }
 
 footer .footerLinks{
@@ -332,14 +364,20 @@ footer .footerLinks{
 footer .btn-submit{
   margin-left: 10px;
   padding: auto;
-  height: 60%;
+  height: 50%;
   width: 50%;
   grid-area: bt;
   display: flex;
-  justify-self: start;
+  justify-self: flex-start;
   align-self: center;
   border-radius: 20px;
   font-size: 1.3vh;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+footer .btn-submit:hover{
+  background: var(--hover-color);
 }
 
 footer .rights{
