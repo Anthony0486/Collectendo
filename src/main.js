@@ -1,4 +1,6 @@
-import './style.css'
+import './style.css';
+
+
 
 //VARIABLES
 const darkModeBtn = document.getElementById("darkModeBtn");
@@ -86,3 +88,14 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+
+
+//TEST FETCH API IGDB DEPUIS PHP
+
+fetch("http://localhost:8888/collectendo/igdb.php") 
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    return data;
+  })
+  .catch(err => console.error(err));
