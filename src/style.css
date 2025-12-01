@@ -237,7 +237,7 @@ body.darkMode{ /*DARK MODE*/
 .modal .inputMail{
   font-size: 0.7em;
   border-radius: 20px;
-  width: 25%;
+  width: 40%;
 }
 
 .modal .btn-submit{
@@ -365,7 +365,7 @@ footer .btn-submit{
   margin-left: 10px;
   padding: auto;
   height: 50%;
-  width: 50%;
+  width: 30%;
   grid-area: bt;
   display: flex;
   justify-self: flex-start;
