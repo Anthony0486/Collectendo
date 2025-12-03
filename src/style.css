@@ -254,74 +254,84 @@ body.darkMode{ /*DARK MODE*/
 
 /* MAIN-------------------------------------- */
 
+ul{
+  list-style: none;
+}
+
 main{
     min-height: 500px;
     width: 100%;
   }
+h1{
+  
+  text-align: center;
+  font-size: 1.8em;
+}
 
-main h2{
+h2{
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
   font-size: 1em;
 }
 
-main h3{
-  font-style: "Roboto", sans-serif;
+h3{
+
   text-align: center;
   font-size: 2em;
 }
 
-main .fichesProduit{
+.fichesProduit{
   padding: 30px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-main .fiche{
+.fiche{
+  width: 180px;        
+  min-height: 200px; 
   background: var(--box-color);
   padding: 30px;
   border: var(--border-color) solid 0.9px;
   box-shadow: var(--box-shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
 } 
 
-
-main .fiche h4{
-  text-align: center;
-}
-
-main .fiche h5{
-  text-align: center;
-  font-size: 0.8em;
-}
-
-main .fiche #addListBtn{
+.fiche #addListBtn{
   border-radius: 20px;
 }
 
-main .fiche #rmListBtn{
+.fiche #rmListBtn{
   background: var(--secondary-color);
   color: var(--bg-color);
   border-radius: 20px;
 }
 
-main .fiche #addListBtn:hover{
+.fiche #addListBtn:hover{
   background: var(--hover-color);
 }
 
-main .fiche #rmListBtn:hover{
+.fiche #rmListBtn:hover{
   background: var(--hover-color);
 }
 
-main .fiche img{
-  display: flex;
-  justify-self: center;
+.fiche img {
+    display: block;
+    margin: 0 auto;
 }
 
-main .fiche input{
+.fiche input{
   padding: 0 5px;
+}
+
+.comingSoon img{
+  width: 87px;
+  height: 135px;
 }
 
 /* FOOTER-------------------------------------- */

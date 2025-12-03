@@ -1,8 +1,6 @@
 <?php
-
 // Import des identifiants 
 include "config.php";
-
 
 // Endpoint IGDB 
 $url = "https://api.igdb.com/v4/games";
@@ -23,7 +21,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($ch);
 curl_close($ch);
 
-// Autorisation
+// Autorisation et format des données
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 

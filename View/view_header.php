@@ -1,14 +1,19 @@
-<!doctype html>
+      <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collectendo</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./src/style.css">
+<script src="./src/header.js" defer></script>
+<script src="./src/main.js" defer></script>
+<!-- <script src="./src/comingSoon.js" defer></script> -->
+<script src="./src/switch2games.js" defer></script>
+</head>
+<body>
       <!-- HEADER -->
     <div class="logo">
-      <img src="./public/Assets/logo-red.svg" alt="logoRouge">
+      <a href="/collectendo/home"><img src="./public/Assets/logo-red.svg" alt="logoRouge"></a>
       <!-- <h1>Full Set collection</h1>/texte sous le logo à valider/ -->
     </div>
     <nav class="navbar">
@@ -17,7 +22,7 @@
         <button id="menuBtn" class="dropBtn">Menu</button>
         <div id="myDropDown" class="dropdownContent">
           <a href="#">Consoles</a>
-          <a href="#">Jeux</a>
+          <a href="/collectendo/console_category">Jeux</a>
           <a href="#">Accessoires</a>
         </div>
       </div>
@@ -94,53 +99,3 @@
     </div>
     </div>
     </div>
-    <!--MAIN -->
-    <main class="latest">
-      <h2>Derniers ajouts</h2>
-      <h3>Voici les entrées du mois:</h3>
-      <div class="fichesProduit">
-        <div class="fiche">
-          <img src="./public/Assets/nintendoswitch2-zeldatotk.svg" alt="ficheProduit">
-          <h4>The legend of Zelda TOTK</h4>
-          <h5>Switch 2</h5>
-          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
-          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
-        </div>
-        <div class="fiche">
-          <img src="./public/Assets/mariokart_switch2.svg" alt="ficheProduit">
-          <h4>Mario Kart World</h4>
-          <h5>Switch 2</h5>
-          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
-          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
-        </div>
-        <div class="fiche">
-          <img src="./public/Assets/metroid_beyon_switch2.svg" alt="ficheProduit">
-          <h4>Metroid prime 4 Beyond</h4>
-          <h5>Switch 2</h5>
-          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
-          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
-        </div>
-        <div class="fiche">
-          <img src="./public/Assets/ff7_switch_2.svg" alt="ficheProduit">
-          <h4>Final fantasy 7 remake intergrade</h4>
-          <h5>Switch 2</h5>
-          <input id="addListBtn" type="submit" value="Ajouter à ma liste">
-          <input id="rmListBtn" type="submit" value="Retirer de ma liste">
-        </div>
-      </div>
-    </main>
-    <!--FOOTER-->
-    <footer>  
-      <ul class="footerLinks">
-        <li><a href="#">CGV</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Accessibilité</a></li>
-      </ul>
-      <input class="inputMail" type="email" placeholder=" Inscription Newsletter">
-      <input class="btn-submit" type="submit" value="Envoyer">
-      <img class="footerLogo" src="./public/Assets/logo-blanc.svg" alt="logoBlanc">
-      <p class="rights">© Collectendo. 2025 tous droits réservés.</p>
-    </footer>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>

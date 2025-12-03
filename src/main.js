@@ -1,101 +1,34 @@
-import './style.css';
+//AFFICHAGE SECTION COMMING SOON
 
+const comingSoon = document.querySelector(".comingSoon");
+const gameList = document.createElement("ul");
+gameList.id = "game-list";
+comingSoon.appendChild(gameList);
 
-
-//VARIABLES
-const darkModeBtn = document.getElementById("darkModeBtn");
-const body = document.body;
-const menuBtn = document.getElementById("menuBtn");
-const dropdown = document.getElementById("myDropDown");
-const menuBtn1 = document.getElementById("menuBtn1");
-const dropdown1 = document.getElementById("myDropDown1");
-const menuBtn2 = document.getElementById("menuBtn2");
-const dropdown2 = document.getElementById("myDropDown2");
-const menuBtn3 = document.getElementById("menuBtn3");
-const dropdown3 = document.getElementById("myDropDown3");
-
-
-
-//DARK MODE
-darkModeBtn.addEventListener("click", () => {
-    body.classList.toggle("darkMode");  
-});
-
-//DROPDOWN MENUS
-menuBtn.addEventListener("click", () => {
-    dropdown.classList.toggle("show");
-});
-menuBtn1.addEventListener("click", () => {
-    dropdown1.classList.toggle("show");
-});
-menuBtn2.addEventListener("click", () => {
-    dropdown2.classList.toggle("show");
-});
-menuBtn3.addEventListener("click", () => {
-    dropdown3.classList.toggle("show");
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown.classList.remove("show");
-  };
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown1.classList.remove("show");
-  };
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown2.classList.remove("show");
-  };
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown3.classList.remove("show");
-  };
-});
-
-
-//MODALE QUI SUIS JE
-const quisuisje = document.querySelector(".lienquisuisje");
-const modal1 = document.getElementById("myModal1");
-const span1 = document.getElementsByClassName("close1")[0];
-
-quisuisje.addEventListener("click", () => {
-  modal1.style.display = "block";
-});
-span1.addEventListener("click", () => {
-  modal1.style.display = "none";
-});
-window.addEventListener("click", (event) => {
-  if (event.target === modal1) {
-    modal1.style.display = "none";
-  }
-});
-//MODALE CONTACT
-const contact = document.querySelector(".lienContact");
-const modal = document.getElementById("myModal");
-const span = document.getElementsByClassName("close")[0];
-
-contact.addEventListener("click", () => {
-  modal.style.display = "block";
-});
-span.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
-
-//TEST FETCH API IGDB DEPUIS PHP
-
-fetch("http://localhost:8888/collectendo/igdb.php") 
+// FETCH API DEPUIS PHP
+fetch("http://localhost:8888/collectendo/index.php")
   .then(res => res.json())
   .then(data => {
-    console.log(data)
-    return data;
+    data.forEach(game => {
+      const li = document.createElement("li");
+      li.classList.add("fiche");
+      const releaseDate =
+      game.release_dates?.[0]?.date
+      ? new Date(game.release_dates[0].date * 1000).toLocaleDateString("fr-FR")
+      : "TBA";
+      const coverUrl = game.cover?.image_id
+      ? `https://images.igdb.com/igdb/image/upload/t_cover_big/${game.cover.image_id}.jpg`
+      : "../public/Assets/nintendo-switch-2-box-art-templates.webp"; // IMAGE PAR DEFAULT
+      li.innerHTML = `
+      <img src="${coverUrl}" alt="${game.name}">
+      <strong>${game.name}</strong>
+      <p>${game.platforms?.map(p => p.name).join(", ")}</p>
+      <em>${releaseDate}</em>`;
+        gameList.appendChild(li);
+    });
+
   })
-  .catch(err => console.error(err));
+  .catch(err => console.error("Erreur fetch :", err));
+
+gameList.classList.add("fichesProduit");
+
