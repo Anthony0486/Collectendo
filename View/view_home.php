@@ -1,7 +1,10 @@
     <!--MAIN -->
     <main >
       <section class="comingSoon">
-          <h1>Les entrées à venir :</h1>
+      <h1>Les entrées à venir :</h1>
+      <div class="fichesProduit">
+        <?php echo $html ?>
+      </div>
       </section>
       <section class="latest">
       <h2>Derniers ajouts</h2>

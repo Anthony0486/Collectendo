@@ -10,8 +10,6 @@ const dropdown2 = document.getElementById("myDropDown2");
 const menuBtn3 = document.getElementById("menuBtn3");
 const dropdown3 = document.getElementById("myDropDown3");
 
-
-
 //DARK MODE
 darkModeBtn.addEventListener("click", () => {
     body.classList.toggle("darkMode");  
