@@ -1,26 +1,25 @@
       <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="./src/style.css">
-<script src="./src/header.js" defer></script>
+    <meta name="description" content="Ce site est une base de données et un outil d'édition de listes pour les collectionneurs de produits Nintendo"  
+    <title></title>
+<link rel="stylesheet" href="./src/style.css?v=1.0""> <!--"?v=1.0" query string = prends la dernière version du fichier css -->
+<script src="./src/header.js" defer></script> <!-- charge le fichier de script après que la page soit entièrement chargée -->
 <script src="./src/main.js" defer></script>
-<!-- <script src="./src/comingSoon.js" defer></script> -->
-<script src="./src/switch2games.js" defer></script>
 </head>
 <body>
       <!-- HEADER -->
     <div class="logo">
-      <a href="/collectendo/home"><img src="./public/Assets/logo-red.svg" alt="logoRouge"></a>
+      <a href="/collectendo/home"><img src="./public/Assets/logo-red.svg" alt="logo rouge"></a>
       <!-- <h1>Full Set collection</h1>/texte sous le logo à valider/ -->
     </div>
     <nav class="navbar">
       <!--DROPDOWN MENU PRINCIPAL-->
-      <div class="dropDown">
-        <button id="menuBtn" class="dropBtn">Menu</button>
-        <div id="myDropDown" class="dropdownContent">
+      <div id="menuButton" class="dropDown">
+        <a class="menuBtn">Menu</a>
+        <div class="dropdownContent">
           <a href="#">Consoles</a>
           <a href="/collectendo/console_category">Jeux</a>
           <a href="#">Accessoires</a>
@@ -28,25 +27,25 @@
       </div>
       <!--DARK MODE-->
       <div class="darkContainer">
-            <button id="darkModeBtn">Mode sombre</button>
+            <a class="darkModeBtn">Mode sombre</a>
           </div>
+      <!--DROPDOWN A PROPOS/RECHERCHER/MON COMPTE-->
         <ul>
-          <!--DROPDOWN A PROPOS/RECHERCHER/MON COMPTE-->
           <li> 
           <div class="dropDown">
-            <a id="menuBtn1" class="aPropos" href="#" alt="lienAPropos">
-            <img alt="aproposlogo" src="./public/Assets/aproposbtnWHITE.svg" alt="lienAPropos">A propos</a>
-          <div id="myDropDown1" class="dropdownContent">
+            <a id="aPropos" class="menuBtn" href="#">
+            <img alt="icone a propos" src="./public/Assets/aproposbtnWHITE.svg">A propos</a>
+          <div class="dropdownContent">
             <a class="lienquisuisje" href="#">Qui suis-je?</a>
-            <a class="lienContact" href="#">Contact</a>
+            <a class="liencontact" href="#">Contact</a>
           </div>
         </div>
         </li>
         <li>
           <div class="dropDown">
-          <a id="menuBtn2" class="search" href="#" alt="lienRecherche">
-          <img alt="recherchelogo" src="./public/Assets/rechercherbtnWHITE.svg" alt="lienRecherche">Rechercher</a>
-        <div id="myDropDown2" class="dropdownContent">
+          <a id="search" class="menuBtn" href="#">
+          <img alt="icone recherche" src="./public/Assets/rechercherbtnWHITE.svg">Rechercher</a>
+        <div class="dropdownContent">
             <input class="inputSearch" type="text" placeholder=" Que recherchez vous?">
             <input class="btn-submit" type="submit" value="Envoyer">
           </div>
@@ -54,9 +53,9 @@
         </li>
           <li>
             <div class="dropDown">
-            <a id="menuBtn3" class="myAcount" href="#" alt="lienMonCompte">
-          <img alt="moncomptelogo" src="./public/Assets/moncomptebtnWHITE.svg" alt="lienMonCompte">Mon compte</a>
-              <div id="myDropDown3" class="dropdownContent">
+            <a id="myAccount" class="menuBtn" href="#">
+          <img alt="icone mon compte" src="./public/Assets/moncomptebtnWHITE.svg">Mon compte</a>
+              <div class="dropdownContent">
             <a class="connexion" href="#">Me connecter</a>
             <a class="personalInformations" href="#">Mes informations personnelles</a>
             <a class="myLists" href="#">Mes Listes</a>
@@ -69,7 +68,7 @@
     <div id="myModal1" class="modal">
       <div class="modal-content">
         <span class="close1">&times;</span>
-        <img src="./public/Assets/logo-red.svg" alt="logoRouge">
+        <img src="./public/Assets/logo-red.svg" alt="logo Rouge">
           <h2>Qui suis-je?</h2><br>
     <div class="modal-body">
       <h4>Bonjour à vous ami collectionneur!</h4><br>
@@ -87,7 +86,7 @@
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img src="./public/Assets/logo-red.svg" alt="logoRouge">
+        <img src="./public/Assets/logo-red.svg" alt="logo Rouge">
           <h2>Me contacter</h2><br>
     <div class="modal-body">
       <h4>Bonjour à vous ami collectionneur!</h4><br>

@@ -22,10 +22,9 @@ body{
   min-height: 100vh;
   background: var(--primary-color);
   font-family: "Roboto", sans-serif; 
-  transition: 0.3s, color 0.3s;
+  transition: 0.1s, color 0.1s;
   color: var(--text-color);
 }
-
 body.darkMode{ /*DARK MODE*/
   background: var(--text-color);
   color: var(--primary-color);
@@ -33,6 +32,15 @@ body.darkMode{ /*DARK MODE*/
   --box-shadow : 0 4px 10px rgba(221, 203, 203, 0.507);
   --textMenu-color : #f6f0f0 ;
 }
+body.darkMode .darkModeBtn{
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  border-radius: 20px;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 4px 5px;
+  }
 
 /* HEADER-------------------------------------- */
 
@@ -65,21 +73,21 @@ body.darkMode{ /*DARK MODE*/
   align-items: flex-end;
 }
 /* DROPDOWN MENU PRINCIPAL-------------------------------------- */
-.dropBtn{
+
+#menuButton{
   background: var(--secondary-color);
   border: solid 2px;
   border-radius: 20px;
   color: var(--primary-color);
   width: 60px;
   font-size: 1.5vh;
+  text-align: center;
   letter-spacing: 1.8px;
   padding: 3px 3px;
   margin-left: 5px;
-}
-
-.dropBtn:hover{
   background: var(--hover-color);
 }
+
 
 .dropDown{
   position: relative;
@@ -87,6 +95,7 @@ body.darkMode{ /*DARK MODE*/
   align-self: center;
   
 }
+
 
 .dropdownContent {
   display: block;
@@ -172,6 +181,7 @@ body.darkMode{ /*DARK MODE*/
   text-decoration: none;
   color: white; 
   font-size: 0.7em; 
+  white-space: nowrap;
 }
 .navbar a:hover {
   color: var(--hover-color);
@@ -185,22 +195,26 @@ body.darkMode{ /*DARK MODE*/
   
 }
 .darkContainer{
-  width: 60px;
+  width: 1000px;
   display: flex;
   align-self: center;
-  justify-content:center ;
+  justify-content: flex-end ;
 }
 
-.navbar #darkModeBtn{
-  background: var(--secondary-color);
-  border: solid 2px;
+.darkModeBtn {
+  display: inline-block;
+  padding: 4px 6px;
   border-radius: 20px;
+  border: 2px solid;
+  font-size: 0.7em;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: var(--text-color);
   color: var(--primary-color);
-  border-radius: 20px;
-  width: 50px;
-  font-size: 0.6em;
+  border-color: var(--primary-color);
 }
-.navbar #darkModeBtn:hover{
+
+.navbar .darkModeBtn:hover{
   background: var(--hover-color);  
 }
 
@@ -302,37 +316,38 @@ h3{
   align-items: center;
 } 
 
-.fiche #addListBtn{
+.addListBtn{
   border-radius: 20px;
 }
 
-.fiche #rmListBtn{
+.rmListBtn{
   background: var(--secondary-color);
   color: var(--bg-color);
   border-radius: 20px;
 }
 
-.fiche #addListBtn:hover{
+.addListBtn:hover{
   background: var(--hover-color);
 }
 
-.fiche #rmListBtn:hover{
+.rmListBtn:hover{
   background: var(--hover-color);
 }
 
 .fiche img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  /* margin: 0 auto; */
+  width: 87px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 5px; 
 }
 
 .fiche input{
   padding: 0 5px;
 }
 
-.comingSoon img{
-  width: 87px;
-  height: 135px;
-}
+
 
 /* FOOTER-------------------------------------- */
 

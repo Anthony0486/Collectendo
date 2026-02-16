@@ -1,60 +1,53 @@
+
 //VARIABLES
-const darkModeBtn = document.getElementById("darkModeBtn");
-const body = document.body;
-const menuBtn = document.getElementById("menuBtn");
-const dropdown = document.getElementById("myDropDown");
-const menuBtn1 = document.getElementById("menuBtn1");
-const dropdown1 = document.getElementById("myDropDown1");
-const menuBtn2 = document.getElementById("menuBtn2");
-const dropdown2 = document.getElementById("myDropDown2");
-const menuBtn3 = document.getElementById("menuBtn3");
-const dropdown3 = document.getElementById("myDropDown3");
+const darkModeBtn = document.querySelector(".darkModeBtn");
+const allDropdowns = document.querySelectorAll(".dropDown"); //renvoie une nodelist (array)
+const quisuisje = document.querySelector(".lienquisuisje");
+const modal1 = document.querySelector("#myModal1");
+const span1 = document.getElementsByClassName("close1")[0];// renvoie le 1er élément du html collection
+const contact = document.querySelector(".liencontact");
+const modal = document.querySelector("#myModal");
+const span = document.getElementsByClassName("close")[0];
 
 //DARK MODE
-darkModeBtn.addEventListener("click", () => {
-    body.classList.toggle("darkMode");  
-});
-
-//DROPDOWN MENUS
-menuBtn.addEventListener("click", () => {
-    dropdown.classList.toggle("show");
-});
-menuBtn1.addEventListener("click", () => {
-    dropdown1.classList.toggle("show");
-});
-menuBtn2.addEventListener("click", () => {
-    dropdown2.classList.toggle("show");
-});
-menuBtn3.addEventListener("click", () => {
-    dropdown3.classList.toggle("show");
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown.classList.remove("show");
+document.addEventListener("DOMContentLoaded", () => {
+  const updateDarkModeBtn = (isDarkModeEnabled) => {
+    darkModeBtn.textContent = isDarkModeEnabled ? "Mode clair" : "Mode sombre"; //Mettre à jour le texte du bouton au toggle
   };
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown1.classList.remove("show");
-  };
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown2.classList.remove("show");
-  };
-});
-window.addEventListener("click", (event) => {
-  if (!event.target.closest(".dropDown")) {
-    dropdown3.classList.remove("show");
-  };
+  const saveMode = localStorage.getItem("darkMode"); //Verifier le mode au chargement de la page
+  const isDarkModeEnabled = saveMode === "enabled"; 
+  document.body.classList.toggle("darkMode", isDarkModeEnabled);
+  updateDarkModeBtn(isDarkModeEnabled); 
+  darkModeBtn.addEventListener("click", () => {
+    const isDarkModeNow = document.body.classList.toggle("darkMode");
+    localStorage.setItem("darkMode", isDarkModeNow ? "enabled" : "disabled");
+    updateDarkModeBtn(isDarkModeNow);
+  });  
 });
 
 
-//MODALE QUI SUIS JE
-const quisuisje = document.querySelector(".lienquisuisje");
-const modal1 = document.getElementById("myModal1");
-const span1 = document.getElementsByClassName("close1")[0];
 
+//DROP DOWN LIST MENUS
+allDropdowns.forEach(dropdown => { //boucle sur le tableau de dd
+  const button = dropdown.querySelector(".menuBtn");
+  const content = dropdown.querySelector(".dropdownContent");
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // bloque le comportement par defaut de <a
+    e.stopPropagation(); // bloque le window.click
+    // console.log(button, content);
+    allDropdowns.forEach(dd => {    // Ferme les autres dd menus
+      if (dd !== dropdown) {
+        dd.querySelector(".dropdownContent").classList.remove("show");
+      }
+    });
+    content.classList.toggle("show"); // Ouvre/ferme le menu cliqué
+  });
+});
+window.addEventListener("click", () => { // ferme le menu au clic dans la fenêtre
+  document.querySelectorAll(".dropdownContent").forEach(cl => cl.classList.remove("show"));
+});
+
+//MODAL QUI SUIS JE
 quisuisje.addEventListener("click", () => {
   modal1.style.display = "block";
 });
@@ -66,15 +59,12 @@ window.addEventListener("click", (event) => {
     modal1.style.display = "none";
   }
 });
-//MODALE CONTACT
-const contact = document.querySelector(".lienContact");
-const modal = document.getElementById("myModal");
-const span = document.getElementsByClassName("close")[0];
-
+//MODAL CONTACT
 contact.addEventListener("click", () => {
   modal.style.display = "block";
 });
 span.addEventListener("click", () => {
+  console.log(span);
   modal.style.display = "none";
 });
 window.addEventListener("click", (event) => {
